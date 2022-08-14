@@ -1,0 +1,4 @@
+infrastructure
+Makefile
+app/node_modules
+app/.npm/_logs

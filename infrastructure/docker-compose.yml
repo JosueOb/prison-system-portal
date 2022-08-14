@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  app:
+    container_name: prison-system-portal
+    build:
+      target: dev
+      context: ../
+    ports:
+      - 3000:3000
+    volumes:
+      - ../app:/home/node
