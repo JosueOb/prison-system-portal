@@ -1,1 +1,2 @@
-export { Cover } from './Cover';
+export * from './Cover';
+export * from './Alert';

@@ -3,10 +3,11 @@ import { Outlet, Link } from 'react-router-dom';
 
 import { ShieldIcon } from '../atoms'
 import { Cover } from '../organisms';
+import { AlertProvider } from '../../contexts';
 
 export const AuthTemplate = () => {
     return (
-        <>
+        <AlertProvider>
             <div className='relative'>
                 <div className='md:fixed md:w-2/5 right-0'>
                     <Cover />
@@ -22,6 +23,6 @@ export const AuthTemplate = () => {
                     </div>
                 </main>
             </div>
-        </>
+        </AlertProvider>
     )
 }

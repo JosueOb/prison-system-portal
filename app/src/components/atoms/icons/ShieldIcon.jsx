@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export const ShieldIcon = ({ styles }) => {
   return (
-    <svg data-icon="shield-alt" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className={`fill-current w-5 h-5 ${styles}`}>
+    <svg data-icon="shield-alt" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className={`fill-current ${styles}`}>
       <path fill="currentColor"
         d="M466.5 83.7l-192-80a48.15 48.15 0 0 0-36.9 0l-192 80C27.7 91.1 16 108.6 16
           128c0 198.5 114.5 335.7 221.5 380.3 11.8 4.9 25.1 4.9 36.9 0C360.1 472.6 496 349.3
@@ -16,4 +16,8 @@ export const ShieldIcon = ({ styles }) => {
 
 ShieldIcon.propTypes = {
   styles: PropTypes.string,
+}
+
+ShieldIcon.defaultProps = {
+  styles: 'w-5 h-5',
 }

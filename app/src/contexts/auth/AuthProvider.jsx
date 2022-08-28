@@ -1,7 +1,9 @@
 import React, { useReducer } from 'react';
+
 import { AuthContext } from './AuthContext';
 import { authReducer } from './authReducer';
 import { types } from './types';
+
 
 export const AuthProvider = ({ children }) => {
     const initialization = () => {
@@ -12,17 +14,19 @@ export const AuthProvider = ({ children }) => {
         }
 
     }
+
     const [authState, dispatch] = useReducer(authReducer, {}, initialization)
 
-    const login = async (email = '', password = '') => {
-        const user = { id: '1', name: 'Josue Cando' }
+    const login = async (user, token) => {
         const action = { type: types.login, payload: user }
         localStorage.setItem('user', JSON.stringify(user));
+        localStorage.setItem('token', token);
         dispatch(action);
     }
 
     const logout = () => {
         localStorage.removeItem('user');
+        localStorage.removeItem('token');
         const action = { type: types.logout }
         dispatch(action)
     }

@@ -1,3 +1,3 @@
-export { Cover } from './organisms';
-export { AuthTemplate } from './templates';
-export { ShieldIcon, Input, Label, Button } from './atoms';
+export *from './organisms';
+export * from './templates';
+export * from './atoms';
