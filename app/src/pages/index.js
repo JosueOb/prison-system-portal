@@ -1,2 +1,2 @@
-export { Login } from './auth';
+export * from './auth';
 export { App } from './app/App';

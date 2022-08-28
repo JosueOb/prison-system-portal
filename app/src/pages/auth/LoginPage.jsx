@@ -1,12 +1,26 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Input, Label, Button } from '../../components'
+import { AuthContext } from '../../contexts';
 
-export const Login = () => {
+export const LoginPage = () => {
+    const { login } = useContext(AuthContext);
+    const navigate = useNavigate();
+
+    const onLogin = (e) => {
+        e.preventDefault();
+        console.log('You clicked submit.');
+        
+        login('test@test.com', '1234');
+        
+        navigate('/');
+    }
+
     return (
         <>
             <h2 className='text-2xl md:text-3xl font-bold'>Welcome Back</h2>
             <p className='text-sm text-gray-500 pb-6'>Please sign in to your account</p>
-            <form action="" className='space-y-7 text-left'>
+            <form className='space-y-7 text-left' onSubmit={onLogin}>
                 <div>
                     <Label description="Email address" htmlFor='email' />
                     <Input
