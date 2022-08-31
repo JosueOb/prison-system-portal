@@ -41,7 +41,7 @@ export const DashboardTemplate = () => {
                         <Link to='/directors' className={`${urlActual === '/directors' ? 'text-blue-300 underline' : 'text-white'} text-2xl block mt-2 hover:text-blue-200`}>Directors</Link>
                     </li>
                     <li className="text-orange-900">
-                        <Link to='/create/director' className={`${urlActual === '/create/director' ? 'text-blue-300 underline' : 'text-white'} text-2xl block mt-2 hover:text-blue-200`}>Create a director</Link>
+                        <Link to='/directors/create' className={`${urlActual === '/directors/create' ? 'text-blue-300 underline' : 'text-white'} text-2xl block mt-2 hover:text-blue-200`}>Create a director</Link>
                     </li>
                     <button type="button" onClick={onLogout} className="m-auto text-white text-2xl block mt-4 hover:text-red-300 text-center bg-red-900 p-1 rounded-lg">Logout</button>
                 </ul>
