@@ -1,4 +1,4 @@
-# Getting Started with Create React App (under maintenance) v-0.1
+# Getting Started with Create React App (under maintenance) v-0.0.1
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
